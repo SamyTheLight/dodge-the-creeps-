@@ -7,8 +7,7 @@ var score
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
-	pass
-	#new_game()
+	get_tree().call_group("mobs", "queue_free")
 
 func game_over() -> void:
 	$ScoreTimer.stop()
